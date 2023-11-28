@@ -17,9 +17,4 @@ document.addEventListener('DOMContentLoaded', function () {
     // Touch events
     mainImage.addEventListener('touchstart', showOverlay);
     overlay.addEventListener('touchend', hideOverlay);
-
-    // Prevent scrolling on touch devices while interacting with the overlay
-    overlay.addEventListener('touchmove', function (e) {
-        e.preventDefault();
-    });
 });
