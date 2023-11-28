@@ -2,15 +2,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const mainImage = document.getElementById('main-image');
     const overlay = document.getElementById('overlay');
 
-    function toggleOverlay() {
-        overlay.style.opacity = (overlay.style.opacity === '0') ? '1' : '0';
+    function showOverlay() {
+        overlay.style.opacity = 1;
+    }
+
+    function hideOverlay() {
+        overlay.style.opacity = 0;
     }
 
     // Mouse events
-    mainImage.addEventListener('click', toggleOverlay);
+    mainImage.addEventListener('mouseenter', showOverlay);
+    overlay.addEventListener('mouseleave', hideOverlay);
 
     // Touch events
-    mainImage.addEventListener('touchstart', toggleOverlay);
+    mainImage.addEventListener('touchstart', showOverlay);
+    overlay.addEventListener('touchend', hideOverlay);
 
     // Prevent scrolling on touch devices while interacting with the overlay
     overlay.addEventListener('touchmove', function (e) {
