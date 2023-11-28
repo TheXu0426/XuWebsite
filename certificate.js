@@ -1,13 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
     const mainImage = document.getElementById('main-image');
     const overlay = document.getElementById('overlay');
+    let isOverlayVisible = false;
 
-    function showOverlay() {
-        overlay.style.opacity = 1;
-    }
-
-    function hideOverlay() {
-        overlay.style.opacity = 0;
+    function toggleOverlay() {
+        isOverlayVisible = !isOverlayVisible;
+        overlay.style.opacity = isOverlayVisible ? 1 : 0;
     }
 
     // Mouse events
@@ -15,6 +13,18 @@ document.addEventListener('DOMContentLoaded', function () {
     overlay.addEventListener('mouseleave', hideOverlay);
 
     // Touch events
-    mainImage.addEventListener('touchstart', showOverlay);
-    overlay.addEventListener('touchend', hideOverlay);
+    mainImage.addEventListener('touchstart', function (event) {
+        event.preventDefault(); // Prevent the default touch behavior
+        toggleOverlay();
+    });
+
+    overlay.addEventListener('touchend', function (event) {
+        event.preventDefault(); // Prevent the default touch behavior
+        hideOverlay();
+    });
+
+    // Prevent scrolling on touch devices while interacting with the overlay
+    overlay.addEventListener('touchmove', function (event) {
+        event.preventDefault();
+    });
 });
