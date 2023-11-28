@@ -186,16 +186,8 @@ footer p {
 }
 
 
- .overlay.active {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-/* 
-        this code is not comment for a moment 
 
 .image-container:hover .overlay {
     opacity: 1;
     transform: scale(1); /* Scale to full size on hover */
 }
-*/
