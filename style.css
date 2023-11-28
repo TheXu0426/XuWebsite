@@ -1,0 +1,193 @@
+body{
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+
+.skillLevel{
+    font-size: 40px;
+    font-style: italic;
+    text-align: left;
+}
+
+.contactMode{
+    color: white;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 17px;
+    font-style: italic;
+    text-align: center;
+}
+
+  
+.text {
+    color: white;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 17px;
+    font-style: italic;
+  }
+  
+
+h1 {
+    
+    color:whitesmoke;
+    text-shadow: 5px 5px 10px deepskyblue;
+    font-size: 70px;
+}
+h2{
+    
+    color: aqua;
+    font-size: 35px;
+    min-width: 1000px;
+    text-align: center;
+}
+
+
+/* CSS to style the footer */
+footer {
+    background-color: #333; /* Background color */
+    color: #fff; /* Text color */
+    padding: 10px; /* Padding around the content */
+    text-align: center; /* Center-align the text */
+}
+
+footer p {
+    margin: 0; /* Remove default paragraph margin */
+}
+
+/* You can add more styles as needed */
+
+
+
+.header-container {
+    min-width: 1000px;
+    text-align: center; /* Center-align the header */
+}
+.header {
+    display: inline; /* Display headers inline */
+    margin: 300px; /* Add some spacing between headers */
+}
+
+
+/* Reset default list styles */
+.navbar {
+    min-width: 999999999px;
+    list-style: circle;
+    padding: 0;
+    margin: 0;
+}
+
+/* Display list items horizontally */
+.navbar li {
+    
+    display: inline;
+    font-size: 20px;
+    margin-right: 70px; /* Add spacing between navigation items */
+}
+
+/* Style the links */
+.navbar a {
+    text-decoration: none;
+    text-shadow: 5px 5px 10px deepskyblue;
+    color: whitesmoke;/* Change the link color */
+    font-weight: bolder;
+}
+
+/* this section is for programming certificate */
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.ranking-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dot-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc; /* Use border instead of background color */
+    cursor: pointer;
+    transition: border-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dot.selected {
+    background-color: #3498db; /* Color to indicate selected dot */
+    border-color: #3498db; /* Border color for selected dot */
+    cursor: not-allowed; /* Disable cursor for selected dot */
+}
+
+.label {
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.profile-image {
+    width: 88px; /* Set your desired width */
+    height: 88px; /* Set your desired height */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+    
+  
+}
+
+
+
+
+/* this section is for the certificate*/
+
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: scale(0); /* Initially scale to 0 size */
+    transform-origin: 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.overlay img {
+    width: 250px; /* Adjust the size of hover images as needed */
+    height: auto;
+    margin: 20px; /* Adjust the spacing between hover images as needed */
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Add transform to the transition */
+}
+
+.overlay img:hover {
+    opacity: 1;
+    transform: scale(1.8); /* Increase the scale factor as needed for the desired enlargement */
+}
+
+
+
+.image-container:hover .overlay {
+    opacity: 1;
+    transform: scale(1); /* Scale to full size on hover */
+}
